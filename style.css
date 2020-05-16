@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(194, 192, 192);
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+.circle {
+    height: 12vh;
+    width: 12vh;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #f2ff00 15.91%, transparent 15.91%, transparent 50%, #f2ff00 50%, #f2ff00 65.91%, transparent 65.91%, transparent 100%);
+    background-size: 16% 16%;
+    position: absolute;
+    z-index: -1;
+    margin-top: 35px;
+}
+.contain {
+    padding: 10px;
+    display: flex;
+    height: 100%;
+}
+.heading {
+    padding: 2%;
+    margin: 50px 2%;
+    font-size: 35px;
+    flex: 50%;
+}
+.row {
+    display: flex;
+}
+.col {
+    flex: 50%;
+}
+.logo {
+    float: right;
+}
+.sm-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15vh;
+    padding: 15px 50px;
+    margin-top: 30px;
+}
+.sm-heading p {
+    font-size: 3vh;
+    color: rgb(71, 71, 71);
+}
+.yellow {
+    background-image: linear-gradient(45deg, #ffff7d 25%, #ffff00 25%, #ffff00 50%, #ffff7d 50%, #ffff7d 75%, #ffff00 75%, #ffff00 100%);
+    background-size: 56.57px 56.57px;
+    height: 100%;
+    width: 100%;
+}
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12vh;
+    text-align: center;
+    padding-top: 50px;
+}
+.container {
+    height: 100%;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.tac {
+    text-align: center;
+}
+.cs {
+    margin-top: 40px;
+    border: 15px solid #ffff7d;
+    border-radius: 20px;
+    height: 60%;
+}
+thead tr th {
+    background-color: #ffd900;
+    font-weight: bolder;
+}
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 4px solid #ffbb00;
+}
+td {
+    border-bottom: 1.5px solid rgb(145, 143, 143);
+}
+tr {
+    transition: 0.3s ease all;
+}
+table tr:nth-child(odd){background-color: #f2f2f2;}
+table tr:nth-child(even){background-color: #fff6c5;}
+
+table tr:hover {background-color: #ddd;}
+.table {
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 720px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .sm-heading, .title {
+        font-size: 6vh;
+    }
+    .logo {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cs {
+        height: 45%;
+    }
+    .table {
+        padding: 10px 10px 10px 10px;
+    }
+}
