@@ -46,7 +46,7 @@ body {
     padding: 15px 50px;
     margin-top: 30px;
 }
-.sm-heading p {
+.slogan {
     font-size: 3vh;
     color: rgb(71, 71, 71);
 }
@@ -107,6 +107,14 @@ table tr:hover {background-color: #ddd;}
 .table {
     overflow-x: auto;
 }
+.mobile {
+    display: none;
+}
+.mute {
+    color: rgb(71, 71, 71);
+    font-size: 2vh;
+    font-family: 'Montserrat', sans-serif;
+}
 
 @media only screen and (max-width: 720px) {
     .row {
@@ -125,5 +133,8 @@ table tr:hover {background-color: #ddd;}
     }
     .table {
         margin: 15px 15px;
+    }
+    .mobile {
+        display: block;
     }
 }
