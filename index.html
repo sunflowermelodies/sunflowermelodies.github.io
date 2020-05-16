@@ -7,13 +7,27 @@
     <link rel="icon" type="img/png" href="emblem.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <title>
         Sunflower Melodies
     </title>
 </head>
 
 <body>
+    <div id="circularMenu1" class="circular-menu circular-menu-left active">
+
+        <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <menu class="items-wrapper">
+            <a href="#" class="menu-item fa fa-home"></a>
+            <a href="#soon" class="menu-item fa fa-hourglass-start"></a>
+            <a href="#releases" class="menu-item fa fa-music"></a>
+            <a href="#about" class="menu-item fa fa-info"></a>
+        </menu>
+
+    </div>
     <div class="contain">
         <div class="heading">
             <div class="row">
@@ -24,6 +38,11 @@
                         Sunflower Melodies
                         <p class="slogan">
                             Bringing the voice of youth to the next level
+                            <br><br>
+                            <a href="https://instagram.com/sunflowermelodiesofficial" target="_blank"><i
+                                    class="fab fa-instagram"></i></a> &nbsp; <a
+                                href="https://www.youtube.com/channel/UCbMHbHKoQHwV1h0Wyzq8A5Q/" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
                         </p>
                     </div>
                 </div>
@@ -33,18 +52,18 @@
             </div>
         </div>
     </div>
-    <div class="yellow tac">
+    <div class="yellow tac" id="soon">
         <div class="title">
             Coming Soon
         </div>
         <img src="YBT.jpg" class="cs">
     </div>
-    <div class="container">
+    <div class="container" id="releases">
         <div class="title">
             Releases & Downloads
         </div>
         <div class="mobile mute tac">
-                Swipe horizontally to view all details
+            Swipe horizontally to view all details
         </div>
         <div class="table">
             <table cellspacing=0>
@@ -57,6 +76,7 @@
                         <th>Artist</th>
                         <th>Duration</th>
                         <th>Date of Release</th>
+                        <th class="tac">Listen</th>
                         <th class="tac">Download</th>
                     </tr>
                 </thead>
@@ -67,44 +87,25 @@
                         <td>Sorry My Friend</td>
                         <td>-</td>
                         <td>Sejal Gupta ft. CV</td>
-                        <td>02:40</td>
+                        <td>02:31</td>
                         <td>01/05/2020</td>
-                        <td class="tac"><a href="#"><img src="download.png" height="30px"></a></td>
-                    </tr>
-                    <tr>
-                        <td class="tac"><img src="01.jpg" height="70px"></td>
-                        <td>01</td>
-                        <td>Sorry My Friend</td>
-                        <td>-</td>
-                        <td>Sejal Gupta ft. CV</td>
-                        <td>02:40</td>
-                        <td>01/05/2020</td>
-                        <td class="tac"><a href="#"><img src="download.png" height="30px"></a></td>
-                    </tr>
-                    <tr>
-                        <td class="tac"><img src="01.jpg" height="70px"></td>
-                        <td>01</td>
-                        <td>Sorry My Friend</td>
-                        <td>-</td>
-                        <td>Sejal Gupta ft. CV</td>
-                        <td>02:40</td>
-                        <td>01/05/2020</td>
-                        <td class="tac"><a href="#"><img src="download.png" height="30px"></a></td>
-                    </tr>
-                    <tr>
-                        <td class="tac"><img src="01.jpg" height="70px"></td>
-                        <td>01</td>
-                        <td>Sorry My Friend</td>
-                        <td>-</td>
-                        <td>Sejal Gupta ft. CV</td>
-                        <td>02:40</td>
-                        <td>01/05/2020</td>
-                        <td class="tac"><a href="#"><img src="download.png" height="30px"></a></td>
+                        <td class="tac"><a href="https://www.youtube.com/watch?v=KZTgkbt8IhE" target="_blank"><i
+                                    class="fab fa-youtube ticon"></i></a></td>
+                        <td class="tac"><a href="#"><i class="fas fa-download ticon"></i></a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <div class="yellow tac" id="about">
+        <div class="title">
+            About Us
+        </div>
+        <div class="slogan tac">
+            This website is curently under developement. Please check back soon later.
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/74a3865664.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
