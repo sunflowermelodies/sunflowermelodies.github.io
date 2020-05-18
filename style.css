@@ -24,6 +24,8 @@ body {
     padding: 10px;
     display: flex;
     height: 100%;
+    background-image: radial-gradient(rgb(194, 192, 192), grey);
+    background-attachment: fixed;
 }
 .heading {
     padding: 2%;
@@ -56,11 +58,14 @@ body {
     color: rgb(71, 71, 71);
     font-size: 5vh;
 }
+.fullheight {
+  height: 100%;
+}
 .yellow {
-    background-image: linear-gradient(45deg, #ffff7d 25%, #ffff00 25%, #ffff00 50%, #ffff7d 50%, #ffff7d 75%, #ffff00 75%, #ffff00 100%);
+    background-image: linear-gradient(45deg, hsl(46, 94%, 65%) 25%, hsl(46, 100%, 49%) 25%, hsl(46, 100%, 49%) 50%, hsl(46, 94%, 65%) 50%, hsl(46, 94%, 65%) 75%, hsl(46, 100%, 49%) 75%, hsl(46, 100%, 49%) 100%);
     background-size: 56.57px 56.57px;
-    height: 100%;
     width: 100%;
+    background-attachment: fixed;
 }
 .title {
     font-family: 'Montserrat', sans-serif;
@@ -80,7 +85,7 @@ body {
 }
 .cs {
     margin-top: 40px;
-    border: 15px solid #ffff7d;
+    border: 15px solid hsl(46, 94%, 65%);
     border-radius: 20px;
     height: 60%;
 }
@@ -129,6 +134,8 @@ table tr:hover {background-color: #ddd;}
     position: fixed;
     bottom: 1em;
     right: 1em;
+    border: 3px solid white;
+    border-radius: 50%;
   }
   
   .circular-menu .floating-btn {
@@ -136,18 +143,17 @@ table tr:hover {background-color: #ddd;}
     width: 3.5em;
     height: 3.5em;
     border-radius: 50%;
-    background-color: hsl(4, 98%, 60%);
     box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
     color: hsl(0, 0%, 100%);
     text-align: center;
     line-height: 3.9;
     cursor: pointer;
     outline: 0;
-    border: 3px solid white;
   }
   
   .circular-menu.active .floating-btn {
     box-shadow: inset 0 0 3px hsla(0, 0%, 0%, .3);
+    border: 3px solid white;
   }
   
   .circular-menu .floating-btn:active {
@@ -173,13 +179,14 @@ table tr:hover {background-color: #ddd;}
     top: 0;
     right: 0;
     z-index: -2;
-    background-color: hsl(4, 98%, 60%);
     transition: all .3s ease;
   }
   
   .circular-menu.active:after {
     transform: scale3d(5.5, 5.5, 1);
     transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+    border: 1px solid white;
+
   }
   
   .circular-menu .items-wrapper {
@@ -212,26 +219,6 @@ table tr:hover {background-color: #ddd;}
   .circular-menu.active .menu-item {
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
-  .circular-menu.active .menu-item:nth-child(1) {
-    transform: translate3d(1em,-7em,0);
-  }
-  
-  .circular-menu.active .menu-item:nth-child(2) {
-    transform: translate3d(-3.5em,-6.3em,0);
-  }
-  
-  .circular-menu.active .menu-item:nth-child(3) {
-    transform: translate3d(-6.5em,-3.2em,0);
-  }
-  
-  .circular-menu.active .menu-item:nth-child(4) {
-    transform: translate3d(-7em,1em,0);
-  }
-  
-  /**
-   * The other theme for this menu
-   */
   
   .circular-menu.circular-menu-left {
     right: auto; 
@@ -266,6 +253,48 @@ table tr:hover {background-color: #ddd;}
     transform: translate3d(7em,1em,0);
   }
 
+.cardrow {
+  display: flex;
+  width: 60%;
+  margin: 20px;
+}
+.card {
+  background-color: hsl(46, 100%, 49%);
+  border: 3px solid white;
+  border-radius: 20px;
+  width: 100%;
+  margin: 15px 15px;
+  padding: 10px 10px;
+  transition: .4s ease all;
+  position: relative;
+}
+.cardimage {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin: 25px;
+}
+.cardname {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5vh;
+  font-weight: bold;
+  background-color: hsl(46, 94%, 65%);
+  border-radius: 20px;
+  padding: 15px;
+}
+.cardtext {
+  background-color: hsl(46, 94%, 65%);
+  border-radius: 20px;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  height: 150px;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 18px black;
+}
+
 @media only screen and (max-width: 720px) {
     .row {
         flex-direction: column-reverse;
@@ -290,5 +319,14 @@ table tr:hover {background-color: #ddd;}
     .circular-menu {
         bottom: 0.7em;
         transform: scale(0.85);
+    }
+    .cardrow {
+      flex-direction: column;
+      width: 80%;
+      margin-left: 0;
+    }
+    .card {
+      margin: 10px;
+      margin-left: 0;
     }
 }
