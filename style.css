@@ -308,7 +308,8 @@ table tr:hover {background-color: #ddd;}
         margin-right: auto;
     }
     .cs {
-        height: 45%;
+        height: 300px;
+        margin-top: 120px;
     }
     .table {
         margin: 15px 15px;
